@@ -24,6 +24,7 @@ namespace BlazorApp1.Client.Pages.User.Create
             //validInput = string.IsNullOrEmpty(Name) ? "is-invalid" : "is-valid";
             Name = e.Value.ToString();
             //validInput = string.IsNullOrEmpty(Name) ? "is-invalid" : "is-valid";
+
         }
     }
 }
