@@ -1,0 +1,55 @@
+﻿@page "/user/create"
+
+<div class="card shadow-lg mb-4 rounded-3">
+    <div class="card-header py-3">
+        <h4 class="my-0 fw-normal"> Featured </h4>
+    </div>
+    <div class="card-body">
+        <div class="row g-3">
+            <div class="col-md-3 col-sm-3">
+                <div class="form-floating mb-2">
+                    <input type="text" class="form-control @validInput" id="floatingFirstName" placeholder="primer nombre" @bind-value=Name @bind-value:event="oninput" >
+                    <div id="validationFirstName" class="invalid-feedback">
+                        Por favor agregar un nombre.
+                    </div>
+                    <label class="text-black-50 fst-italic" for="floatingFirstName validationFirstName">Primer Nombre *</label>
+
+                </div>
+            </div>
+            
+            <div class="col-md-3 col-sm-3">
+                <div class="has-validation">
+                    <div class="form-floating mb-2">
+                        <input type="text" class="form-control" id="floatingSecondName" placeholder="segundo nombre" required>
+                        <div class="invalid-feedback">
+                            Please choose a username.
+                        </div>
+                        <label class="text-black-50 fst-italic" for="floatingSecondName">Segundo Nombre</label>
+                    </div>
+                </div>
+               
+            </div>
+
+            <div class="col-md-3 col-sm-3">
+                <div class="form-floating mb-2">
+                    <input type="text" class="form-control" id="floatingLastName" placeholder="apellido paterno">
+                    <label class="text-black-50 fst-italic" for="floatingLastName">Apellido Paterno</label>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-3">
+                <div class="form-floating mb-2">
+                    <input type="text" class="form-control" id="floatingSecondLastName" placeholder="apellido materno">
+                    <label class="text-black-50 fst-italic" for="floatingSecondLastName">Apellido Materno</label>
+                </div>
+            </div>
+            
+            <div class="col-12">
+                <button type="button" class="btn btn-outline-success shadow  mb-2 rounded-3" @onclick="Send">Enviar</button> 
+            </div>
+
+        </div>
+        
+    </div>
+</div>
+
